@@ -1,0 +1,28 @@
+<div class="container w-100">
+    <section class="class position-relative text-white">
+        <h3 class="m-4 pt-4">{{ className }}</h3>
+        <p class="position-absolute end-0 top-0 m-4"> {{ classDate | date:"MM/dd/yy" }}</p>
+        <div class="position-absolute bottom-0">
+            <p class=" fw-bold fs-3 m-4">{{ classDescription }}</p>
+            <p class=" fw-bold fs-3 m-4">{{ classbranch }}</p>
+        </div>
+    </section>
+    <div class="d-flex w-100 ">
+        <div class=" sidebar w-20 m-3 border rounded ">
+            <a><i class="mx-2 fs-5 fa-solid fa-book-open"></i>Cours</a>
+            <a><i class="mx-2 fs-5 fa-solid fa-circle-info"></i>News</a>
+            <a><i class="mx-2 fs-5 fa-solid fa-video"></i>Video</a>
+            <a><i class="mx-2 fs-5 fa-solid fa-file-pen"></i>Exames </a>
+        </div>
+        <div class="item-center w-100">
+            <div *ngFor="let cours of listofcours " class="container  border rounded my-3 position-relative">
+                <h3 class="m-4 "><i class="text-primary me-3 fa-solid fa-book "></i> {{cours.name}} </h3>
+                <h3 class="text-primary position-absolute top-0 end-0 m-2 ">{{cours.date_creation | date:"MM/dd/yy "}}</h3>
+                <h1>{{cours.description}}</h1>
+                <p>Open a PDF file <a class="mx-4 text-primary" (click)="download(cours.pdf_name)">Download File</a></p>
+
+            </div>
+        </div>
+
+    </div>
+</div>

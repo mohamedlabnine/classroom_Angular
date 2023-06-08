@@ -1,0 +1,44 @@
+.class {
+    background-color: lightsalmon;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.pdf {
+    width: 50%;
+}
+
+
+/* The side navigation menu */
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    overflow: auto;
+}
+
+
+/* Sidebar links */
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+/* Active/current link */
+
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* Links on mouse-over */
+
+.sidebar a:hover:not(.active) {
+    background-color: blue;
+    color: white;
+}

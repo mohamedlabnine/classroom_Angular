@@ -1,0 +1,22 @@
+.content {
+    width: 100%;
+    height: auto;
+    height: auto;
+    margin-top: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.bar {
+    z-index: 1;
+}
+
+.sidenav {
+    margin-top: 5%;
+    width: 160px;
+    position: fixed;
+}
+
+.cours {
+    width: 310px;
+}

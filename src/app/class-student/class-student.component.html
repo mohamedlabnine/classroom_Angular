@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="m-4 p-4 row justify-content-center">
+    <div *ngFor="let classe of listofclass" class="cours m-2">
+        <mat-card class="example-card" style="height: 100%;">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{ classe.name }}</mat-card-title>
+                <p class="position-absolute end-0 me-4">{{ classe.date_created | date:"MM/dd/yy" }}</p>
+            </mat-card-header>
+            <img style="height: 50%;" mat-card-image src="{{ '../../assets/Image/' + classe.image}}" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    {{ classe.branch}}
+                </p>
+                <p>
+                    {{ classe.description}}
+                </p>
+
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="removeClasses(+classe.id )" mat-button><i class="fs-4 text-primary fa-solid fa-trash"></i></button>
+                <button (click)="goTocours(classe)" mat-button><i class="fs-4 text-primary fa-solid fa-folder"></i></button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

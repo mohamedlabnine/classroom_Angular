@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<div class="d-flex mt-3 justify-content-center">
+    <table class="table table-hover w-50">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">pdf</th>
+                <th scope="col">description</th>
+                <th scope="col">date</th>
+                <th scope="col">operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cours of listOfCours">
+                <th scope="row">{{cours.name}}</th>
+                <td><a (click)="download(cours.pdf_name)" class="mx-4 text-primary" type="btn">open File</a></td>
+                <td>{{cours.description}}</td>
+                <td>{{cours.date_creation | date:"MM/dd/yy" }}</td>
+                <td>
+                    <i (click)="removecours(+cours.id)" class="mx-2 fs-2 text-danger fa-regular fa-trash-can"></i>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" tabindex="-1" id="exampleModal" aria-labelledby="addClass" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-primary" id="exampleModalLabel">Add Cours</h5>
+                <button type="button" class="btn-close" #closebutton data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div *ngIf="!valid_form" style="background : #DA7B96" class="text-center text-white border rounded mb-4 p-3"><span>Complete information</span></div>
+
+                <form method="post" [formGroup]="form_cours">
+
+                    <div class="d-flex flex-wrap">
+
+                        <div class="form-group m-2">
+                            <label class="control-label text-primary">Name Of cours</label>
+                            <input (click)="dismissError()" formControlName="name" class="form-control input-md " required type="text ">
+                        </div>
+
+                        <div class="form-group m-2 ">
+                            <label class=" control-label text-primary ">file of cours </label>
+                            <input (click)="dismissError()" formControlName="pdf" type="file" (change)="getPdfFile($event)" class="form-control input-md " required>
+                            <span *ngIf="!validPdf" class="text-danger mt-1">Warning : the file should be a pdf</span>
+                        </div>
+                        <div class="form-group m-2 ">
+                            <label class="control-label text-primary ">Description</label>
+                            <textarea (click)="dismissError()" formControlName="description" cols="40 " class="form-control input-md " rows="1 "> </textarea>
+                        </div>
+                    </div>
+                    <button type="submit" (click)="addcours()" class="btn btn-primary btn-block mb-3">Add</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

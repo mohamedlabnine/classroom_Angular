@@ -1,0 +1,15 @@
+.content {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    z-index: 0;
+}
+
+.cours {
+    width: 500px;
+    height: 600;
+}
+
+.example-card {
+    height: 100%;
+}

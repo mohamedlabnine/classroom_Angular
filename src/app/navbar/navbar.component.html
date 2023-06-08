@@ -1,0 +1,18 @@
+<mat-toolbar>
+    <nav class="w-100  navbar navbar-expand-lg navbar-light ">
+        <div class="d-flex ms-4">
+            <img src="../../assets/Image/download-removebg-preview.png" alt="" width="40" height="40">
+            <p routerLink="" class="text-primary ms-2">Online Class</p>
+        </div>
+
+        <div class="position-absolute  end-0 me-4 d-flex flew-row">
+            <div class="mx-3">
+                <i class="text-primary fa-solid fa-plus"></i>
+            </div>
+            <div>
+                <a routerLink="Auth" *ngIf="!is_login" class="fs-5 text-primary" mat-button>Login</a>
+                <button (click)="logout()" *ngIf="is_login" class="fs-5 text-primary" mat-button>Logout</button>
+            </div>
+        </div>
+    </nav><br><br>
+</mat-toolbar>

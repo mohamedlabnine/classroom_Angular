@@ -1,0 +1,79 @@
+<div class="bg-light">
+    <nav class="w-100  navbar navbar-expand-lg navbar-light ">
+        <div class="d-flex ms-4">
+            <img src="../../assets/Image/download-removebg-preview.png" alt="" width="40" height="40">
+            <p class="text-primary ms-2">Online Class</p>
+        </div>
+        <div class="position-absolute  end-0 me-4">
+            <a routerLink="Auth" *ngIf="!is_login" class="fs-5 text-primary" mat-button>Login</a>
+            <button (click)="logout()" *ngIf="is_login" class="fs-5 text-primary" mat-button>Logout</button>
+            <a *ngIf="is_login" class="fs-4 border-non"><i class="m-3 fa-solid fa-user"></i></a>
+        </div>
+    </nav><br><br>
+    <div class="d-flex  justify-content-center my-4">
+        <div class="m-4 text-center text-primary">
+            <h1 class="m-3">Online courses</h1>
+            <p class="m-3">Don't waste your money on other sources </p>
+            <button type="btn" class="btn btn-primary">Start for free</button>
+        </div>
+        <div class="m-4  w-50">
+            <img class="img_body" src="../../assets/Image/home.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="text-secondery text-center w-100">
+    <h1>Our features</h1>
+</div>
+<section class="d-flex justify-content-center ">
+
+    <div class="m-4 border rounded d-flex text-primary">
+        <div class="m-3">
+            <i class="fs-1 fa-solid fa-book"></i>
+        </div>
+        <div class="m-3">
+            <p>Online Cours</p>
+        </div>
+    </div>
+    <div class="m-4 border rounded d-flex text-primary">
+        <div class="m-3">
+            <i class="fs-1 fa-solid fa-file-pen"></i>
+        </div>
+        <div class="m-3">
+            <p>Online Training</p>
+        </div>
+    </div>
+    <div class="m-4 border rounded d-flex text-primary">
+        <div class="m-3">
+            <i class="fs-1 fa-solid fa-video"></i>
+        </div>
+        <div class="m-3">
+            <p>Online video</p>
+        </div>
+    </div>
+</section>
+
+<footer class=" mt-4 bg-dark text-center text-white">
+    <div class="container p-4 pb-0">
+        <section class="mb-4">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </section>
+
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:Mohamed Labnine
+    </div>
+</footer>
